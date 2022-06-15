@@ -285,7 +285,7 @@ home = [
           "https://ideakart.com/book/life-secrets-of-the-amatsu-tatara-the-documents-of-takamatsu-toshitsugu-interviews-with-hatsumi-masaaki-isbn10-1678390194-isbn13-9781678390198",
       },
       {
-        key: "2",
+        key: "3",
         image:
           "https://images-eu.ssl-images-amazon.com/images/I/41bH8smmEWL.jpg",
         name: "Surrounding ourselves Medicinal plants / நம்மை சுற்றியுள்ள மருத்துவ தாவரங்கள்",
