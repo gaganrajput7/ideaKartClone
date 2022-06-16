@@ -1,0 +1,20 @@
+
+.main{
+    width: 90%;
+    margin:auto;
+    display: grid;
+      grid-template-columns: repeat(4,200px);
+      gap: 25px;
+      margin-top: 0px;
+
+}
+.header{
+    width: 90%;
+    margin:auto;
+    margin-bottom:0px;
+    margin-top:0px;
+
+}
+h1{
+    margin:10px 0 10px 0;
+}
