@@ -32,3 +32,6 @@
     outline: none;
     cursor: pointer;
 }
+.signUp>.gotosignin{
+    cursor: pointer;
+}

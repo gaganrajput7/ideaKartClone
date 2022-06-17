@@ -48,7 +48,7 @@ const Signup = () => {
             <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
             <div className="button" onClick={Signup}>signUp</div>
             <div>or</div>
-            {/* <div className="button" onClick={() =>navigate.push("/signIn")}>Login</div> */}
+            {/* <div className="gotosignin" onClick={() =>navigate.push("/signIn")}>Login</div> */}
         </div>
     )
 }
