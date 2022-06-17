@@ -18,11 +18,14 @@ app.use(
 app.use('/user',userRouter)
 app.get("/products", async (req, res) => {
     const Products = await products.find();
+    
   
     res.status(201).send(Products);
   });
 
-
+app.get('/',(req,res)=>{
+    res.send("Server started")
+})
 app.listen(process.env.PORT||8080,async()=>{
     await connect;
     console.log("connected to db")
