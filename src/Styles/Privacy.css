@@ -1,0 +1,17 @@
+.mainDiv-privacy{
+    /* border: 1px solid black; */
+    width: 95%;
+    text-align: left;
+    padding: 0px 0px 0px 60px ;
+}
+
+.mainDiv-privacy h1{
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.mainDiv-privacy p{
+    font-size: 14px;
+}
