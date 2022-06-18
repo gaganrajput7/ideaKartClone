@@ -1,6 +1,7 @@
 import React from 'react'
-
-
+import './nav.css'
+import {AiOutlineMenu} from 'react-icons/ai'
+import {GiTireIronCross} from 'react-icons/gi'
 const mainStyle = {
     "height":"60px",
     "display":"flex",
@@ -40,6 +41,13 @@ export default function NavBar() {
   return (
 <>
 <div style={mainStyle}>
+    <div><input type="checkbox" id='check' />
+    <label htmlFor="check">
+    <AiOutlineMenu id='btn'/>
+<GiTireIronCross id='cancel'/>
+    </label>
+    </div>
+
 <div style={mainChild}>
     <h4 style={{"color":"rgb(255,255,0)",fontWeight:"lighter",fontSize:"20px"}}>lDEAKART</h4>
     <div> <input style={inputBox} type="text" placeholder='Search' />
