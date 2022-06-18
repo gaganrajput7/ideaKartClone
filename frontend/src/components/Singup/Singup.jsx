@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./signUp.css";
 import axios from "axios";
-// import { useNavigate  } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 
 const Signup = () => {
 
-    // const navigate = useNavigate ();
+    const navigate = useNavigate ();
 
     const [ user, setUser] = useState({
        
@@ -20,12 +20,12 @@ const Signup = () => {
     };
 
     const Signup = () => {
-        const { name, email,mobile, password, reEnterPassword } = user
-        if( name && email && mobile && password && (password === reEnterPassword)){
-            axios.post("http://localhost:8080/Signup", user)
+        const { name, email,mobile, password } = user
+        if( name && email && mobile && password){
+            axios.post("https://ideakartclone.herokuapp.com/user/singup",user)
             .then( res => {
                 alert(res.data.message);
-                // navigate.push("/signIn");
+                navigate("/singin");
             });
         } else {
             alert("invlid input");
@@ -41,10 +41,9 @@ const Signup = () => {
             <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>
             <input type="text" name="mobile" value={user.mobile} placeholder="Your mobile Number" onChange={ handleChange }></input>
             <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={ handleChange }></input>
-            <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
             <div className="button" onClick={Signup}>signUp</div>
             <div>or</div>
-            {/* <div className="gotosignin" onClick={() =>navigate.push("/signIn")}>Login</div> */}
+            <div className="gotosignin" onClick={() =>navigate("/singin")}>Login</div>
         </div>
     )
 }

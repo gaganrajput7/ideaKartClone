@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Main from './Home/Main'
 import Signin from './SingIN/SingIn'
 import Signup from './Singup/Singup'
+import Productdetail from './Home/Productdetail'
 
 export default function MinRoutes() {
   return (
@@ -12,6 +13,7 @@ export default function MinRoutes() {
         <Route path='/' element={<Main/>}/>
         <Route path='/singin' element={<Signin/>}/>
         <Route path='/singup' element={<Signup/>}/>
+        <Route path='/productdetail' element={<Productdetail/>}/>
     </Routes>
     </>
   )

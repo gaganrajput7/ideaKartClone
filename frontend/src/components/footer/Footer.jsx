@@ -7,6 +7,7 @@ const footerLi={
     "color":"rgb(63,132,197)",
     "margin":"10px 0px 0px 0px",
     "textDecoration": "none",
+    "textAlign":"left"
 }
 const footerLinks={
     "textDecoration": "none",

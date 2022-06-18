@@ -20,7 +20,7 @@ function Main() {
   return (
     <>
       <div className={styles.header}>
-        <h1>Top Reads</h1>
+      <h1>Top Reads</h1>
       </div>
       <div className={styles.main}>
         {data.map((row) => (

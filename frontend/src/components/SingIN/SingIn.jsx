@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import "./singin.css";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Signin = ({ setsignInUser}) => {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [ user, setUser] = useState({}
     );
@@ -22,8 +22,8 @@ const Signin = ({ setsignInUser}) => {
         axios.post("https://ideakartclone.herokuapp.com/user/login", user)
         .then(res => {
             alert(res.data.message)
-            setsignInUser(res.data.user)
-            // navigate.push("/")
+            // setsignInUser(res.data.user)
+            navigate("/")
         });
     }
 
@@ -34,7 +34,7 @@ const Signin = ({ setsignInUser}) => {
             <input type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
             <div className="button" onClick={Signin}>signIn</div>
             <div>or</div>
-            {/* <div className="gotosignup" onClick={() =>navigate.push("/signUp")}>Register</div> */}
+            <div className="gotosignup" onClick={() =>navigate("/singup")}>Register</div>
         </div>
     )
 }

@@ -60,7 +60,7 @@ export default function NavBar() {
                 cursor: "pointer",
               }}
             >
-              lDEAKART
+              IDEAKART
             </h4>
           </Link>
 
