@@ -1,0 +1,21 @@
+.main{
+    width: 100%;
+    height: auto;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(4,270px);
+    gap: 25px;
+    margin-top: 0px;
+    justify-content:center;
+
+}
+.header{
+    width: 85%;
+    margin:auto;
+    margin-bottom:0px;
+    margin-top:0px;
+
+}
+h1{
+    margin:10px 0 10px 0;
+}
