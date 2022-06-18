@@ -15,11 +15,12 @@ img{
 .cardImg{
     padding: 10px;
 }
-.cardDescription{
+.cardName{
     padding: 10px;
 }
 .cardPrice{
     padding: 10px;
+    color: blue;
 }
 .cardIcons{
     display: flex;
@@ -34,4 +35,27 @@ img{
 .cardBulletIcon >img{
      width: 25px;
     height: 25px;
+}
+.cardVerticalLine{
+    width: 1px;
+    height: 25px;
+    background-color:lightgrey;
+}
+.cardHorizontalLine{
+    width: 90%;
+    margin: auto;
+    height: 1px;
+    background-color:lightgrey;
+}
+
+a{
+   text-decoration: none;
+   text-align: center;
+   margin-bottom:10px;
+}
+
+
+.cardDetails:hover{
+    height: 100%;
+    background-color:hwb(64 84% 5%);
 }
