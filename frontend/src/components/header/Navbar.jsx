@@ -1,24 +1,21 @@
 import React from "react";
 import { useState } from "react";
-import './NavSTyles.css'
-import { AiOutlineMenu } from "react-icons/ai";
+import "./NavSTyles.css";
+// import { AiOutlineMenu } from "react-icons/ai";
 // import { GiTireIronCross } from "react-icons/gi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-
-
-
 export default function NavBar() {
-  const [name,setName]=useState("")
-const handleChange=(e)=>{
-setName(e.target.value)
-}
+  const [name, setName] = useState("");
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
 
-const handleClick= async()=>{
-  // let res = await fetch(`https://ideakartclone.herokuapp.com/products/search/${name}`)
-// let data = await res.json()
-
-}
+  const handleClick = async () => {
+    // let res = await fetch(`https://ideakartclone.herokuapp.com/products/search/${name}`)
+    // let data = await res.json()
+  };
   return (
     <>
       <div className="mainClass">
@@ -44,8 +41,15 @@ const handleClick= async()=>{
           </Link>
 
           <div className="inputBtn">
-            <input  type="text" placeholder="Search" onChange={handleChange} className="searchInput"/>
-            <button className="searchButton" onClick={handleClick}>Search</button>
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={handleChange}
+              className="searchInput"
+            />
+            <button className="searchButton" onClick={handleClick}>
+              Search
+            </button>
           </div>
         </div>
         <div className="mainChild">
@@ -61,9 +65,25 @@ const handleClick= async()=>{
           <Link to="/singup" className="linkStyle">
             Sing Up
           </Link>
-        </div>
-        <div className="menubtn">
-        <AiOutlineMenu id='btn'/>
+          <div>
+            {/* <p
+              style={{
+                width: "20px",
+                height: "20px",
+                background: "pink",
+                borderRadius: "50%",
+                position: "absolute",
+                right:"40px",
+                top:"-10px",
+                color:"black",
+                display:"flex",
+                alignItems:"center",
+                justifyContent:"center"
+                
+              }}
+            >0</p> */}
+            <AiOutlineShoppingCart style={{ fontSize: "30px" }} />
+          </div>
         </div>
       </div>
     </>
