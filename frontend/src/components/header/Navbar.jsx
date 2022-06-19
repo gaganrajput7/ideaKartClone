@@ -1,56 +1,35 @@
 import React from "react";
-
-// import { AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
+import './NavSTyles.css'
+import { AiOutlineMenu } from "react-icons/ai";
 // import { GiTireIronCross } from "react-icons/gi";
 import { Link } from "react-router-dom";
-const mainStyle = {
-  height: "60px",
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "0px 50px 0px 50px",
-  background: "rgb(40,116,240)",
-  color: "white",
-  borderRadius: "5px",
-};
-const mainChild = {
-  display: "flex",
-  justifyContent: "center",
-  gap: "40px",
-  alignItems: "center",
-};
-const inputBox = {
-  width: "400px",
-  height: "25px",
-  borderRadius: "5px",
-  background: "white",
-  padding: "5px",
 
-  outline: "none",
-};
-const inputButton = {
-  width: "100px",
-  padding: "10px",
-  background: "white",
 
-  borderRadius: "5px",
-};
-const linksStyle = {
-  textDecoration: "none",
-  color: "white",
-};
+
 
 export default function NavBar() {
+  const [name,setName]=useState("")
+const handleChange=(e)=>{
+setName(e.target.value)
+}
+
+const handleClick= async()=>{
+  // let res = await fetch(`https://ideakartclone.herokuapp.com/products/search/${name}`)
+// let data = await res.json()
+
+}
   return (
     <>
-      <div style={mainStyle}>
+      <div className="mainClass">
         {/* <div><input type="checkbox" id='check' />
     <label htmlFor="check">
-    <AiOutlineMenu id='btn'/>
+    
 <GiTireIronCross id='cancel'/>
     </label>
     </div> */}
 
-        <div style={mainChild}>
+        <div className="mainChild">
           <Link to="/">
             <h4
               style={{
@@ -64,25 +43,27 @@ export default function NavBar() {
             </h4>
           </Link>
 
-          <div>
-            {" "}
-            <input style={inputBox} type="text" placeholder="Search" />
-            <button style={inputButton}>Search</button>
+          <div className="inputBtn">
+            <input  type="text" placeholder="Search" onChange={handleChange} className="searchInput"/>
+            <button className="searchButton" onClick={handleClick}>Search</button>
           </div>
         </div>
-        <div style={mainChild}>
-          <Link to="/about" style={linksStyle}>
+        <div className="mainChild">
+          <Link to="/about" className="linkStyle">
             About
           </Link>
-          <Link to="/contact" style={linksStyle}>
+          <Link to="/contact" className="linkStyle">
             Contact
           </Link>
-          <Link to="/singin" style={linksStyle}>
+          <Link to="/singin" className="linkStyle">
             Sing In
           </Link>
-          <Link to="/singup" style={linksStyle}>
+          <Link to="/singup" className="linkStyle">
             Sing Up
           </Link>
+        </div>
+        <div className="menubtn">
+        <AiOutlineMenu id='btn'/>
         </div>
       </div>
     </>

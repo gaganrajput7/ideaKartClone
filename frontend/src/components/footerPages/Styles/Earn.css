@@ -1,0 +1,43 @@
+
+
+
+.heading-Earn{
+    /* border: 1px solid blue; */
+    height: 80px;
+    width: 70%;
+}
+.threeDiv-Earn{
+    /* border: 1px solid red; */
+    height: 400px;
+    width: 95%;
+    margin: 40px 0px 0px 0px;
+    display: flex;
+}
+
+.threeDiv-Earn div{
+    height: 90%;
+    width: 30%;
+    border: 1px solid rgb(5, 5, 6);
+    margin: 0px 0px 0px 30px;
+    text-align: center;
+}
+.videoDiv-Earn{
+    /* border: 1px solid red; */
+    height: 500px;
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+
+}
+
+/* .threeDiv button {
+    margin: 20px 0px 0px 0px;
+} */
+.getStart-Earn{
+    margin: 40px 0px 0px 45% ;
+    height: 35px;
+    width: 120px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(51,122,183);
+    border-radius: 10px;
+}

@@ -19,3 +19,30 @@
 h1{
     margin:10px 0 10px 0;
 }
+
+
+@media  (max-width:760px) {
+    .main{width: 100%;
+        height: auto;
+        margin:auto;
+        display: grid;
+        grid-template-columns: repeat(2,270px);
+        gap: 25px;
+        margin-top: 0px;
+        justify-content:center;
+    }
+    
+}
+@media (max-width:200px) {
+    .main{
+        width: 100%;
+    height: auto;
+    margin:auto;
+        display: grid;
+        grid-template-columns: repeat(1,270px);
+        gap: 25px;
+        margin-top: 0px;
+        justify-content:center;
+    }
+    
+}

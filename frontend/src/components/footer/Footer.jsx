@@ -17,8 +17,8 @@ export default function Footer() {
     <div style={mainFooter}><h34>Get To Know Us</h34>
     <div style={footerLi}>
      <Link to='/about' style={footerLinks}> <li >About</li></Link>
-     <Link to='/about' style={footerLinks}> <li>Contact</li></Link>
-     <Link to='/about' style={footerLinks}> <li>Search</li></Link>
+     <Link to='/contact' style={footerLinks}> <li>Contact</li></Link>
+     <Link to='/search' style={footerLinks}> <li>Search</li></Link>
      <Link to='/about' style={footerLinks}>   <li>Privacy Policy</li></Link>
      <Link to='/about' style={footerLinks}> <li>Refund Policy</li></Link>
      <Link to='/about' style={footerLinks}> 

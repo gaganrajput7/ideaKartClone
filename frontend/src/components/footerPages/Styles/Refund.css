@@ -1,0 +1,18 @@
+.main-refund{
+    /* border: 1px solid black; */
+    width: 90%;
+    text-align: left;
+    padding: 0px 0px 0px 50px;
+}
+
+.main-refund h3{
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 40px;
+}
+
+.main-refund p{
+    font-size: 25px;
+}
