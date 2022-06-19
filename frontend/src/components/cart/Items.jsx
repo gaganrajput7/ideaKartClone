@@ -12,7 +12,7 @@ const Items = ({ id, name, image, price, quantity }) => {
         </div>
 
         <div className="title">
-          <h3>{name}</h3>
+          <h4>{name}</h4>
         </div>
 
         <div className="add-minus-quantity">

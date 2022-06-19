@@ -27,6 +27,10 @@ img{
     justify-content: space-between;
     padding: 10px;
 }
+.cardIcons:hover{
+    cursor: pointer;
+}
+
 .cardCartIcon >img{
     width: 25px;
     height: 25px;
