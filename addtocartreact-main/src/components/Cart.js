@@ -1,13 +1,13 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import "./cart.css";
-import { products } from "./products";
+import { product } from "./product";
 import ContextCart from "./ContextCart";
 import { reducer } from "./reducer";
 
 export const CartContext = createContext();
 
 const initialState = {
-  item: products,
+  item: product,
   totalAmount: 0,
   totalItem: 0,
 };
@@ -53,7 +53,8 @@ const Cart = () => {
 
   return (
     <CartContext.Provider
-      value={{ ...state, removeItem, clearCart, increment, decrement }}>
+      value={{ ...state, removeItem, clearCart, increment, decrement }}
+    >
       <ContextCart />
     </CartContext.Provider>
   );

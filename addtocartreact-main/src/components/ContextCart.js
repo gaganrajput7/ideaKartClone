@@ -1,10 +1,19 @@
 import React, { useContext } from "react";
 import { Scrollbars } from "react-custom-scrollbars-2";
+// import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Items from "./Items";
 import { CartContext } from "./Cart";
 
 const ContextCart = () => {
   const { item, clearCart, totalItem, totalAmount } = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const handlecheckout = () => {
+    navigate("/checkout");
+  };
+
+  localStorage.setItem("totalincart", totalAmount);
 
   if (item.length === 0) {
     return (
@@ -67,7 +76,12 @@ const ContextCart = () => {
           <h3>
             Cart Total : <span>{totalAmount}₹</span>
           </h3>
-          <button>checkout</button>
+          <button
+            onClick={handlecheckout}
+            style={{ backgroundColor: "black", color: "white" }}
+          >
+            checkout
+          </button>
           <button className="clear-cart" onClick={clearCart}>
             Clear Cart
           </button>
