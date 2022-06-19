@@ -1,11 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./card.module.css";
+import {useNavigate} from "react-router-dom";
+import Productdetail from "./Productdetail";
 
 function Card(props) {
-  const {id}=props.row;
-  console.log(id);
+ const navigate=useNavigate();
   const row = props.row;
+  // console.log(row);
+
+  
+  const handleData=()=>{
+
+    localStorage.setItem("productData",JSON.stringify(row));
+    navigate("/productdetail")
+  }
+
+
   return (
     <div className={styles.card}>
       <div className={styles.cardImg}>
@@ -21,7 +32,7 @@ function Card(props) {
         <div className={styles.cardIcons}>
           <div className={styles.cardCartIcon}>
             <img src="/shopping-cart.png" alt="cartIcon" />
-            <Link to={`/${id}`}> View Now</Link>
+            <a onClick={handleData}>View Now</a>
           </div>
           <div className={styles.cardVerticalLine}></div>
           <div className={styles.cardBulletIcon}>
