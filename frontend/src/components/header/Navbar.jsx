@@ -39,7 +39,7 @@ const handleClick= async()=>{
                 cursor: "pointer",
               }}
             >
-              lDEAKART
+              IDEAKART
             </h4>
           </Link>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+  import React, { useState } from "react";
 import Card from "./Card";
 import styles from "./main.module.css";
 import { useEffect } from "react";
@@ -13,14 +13,13 @@ function Main() {
   async function getData() {
     let res = await fetch("https://ideakartclone.herokuapp.com/products");
     let data = await res.json();
-    console.log(data);
     setData(data);
   }
 
   return (
     <>
       <div className={styles.header}>
-        <h1>Top Reads</h1>
+      <h1>Top Reads</h1>
       </div>
       <div className={styles.main}>
         {data.map((row) => (
