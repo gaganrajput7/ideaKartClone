@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
+// import "../App.css";
 // import { Authcontext } from "./Authentication/CartContext";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/css/bootstrap-theme.css";
 export const Checkout = () => {
-  //  const {arr,setarr}= useContext(Authcontext)
 
   const all = localStorage.getItem("totalincart");
   console.log(all);
@@ -22,17 +21,7 @@ export const Checkout = () => {
     setTimeout(() => {
       navigate("/");
     }, 6000);
-    //   localStorage.setItem("totalincart", 0);
-
-    //   fetch(`http://localhost:3000/data`,{
-    //     headers:{'content-type':'application/json'},
-    //     method:"PATCH",
-    //     body:JSON.stringify(setarr([]))
-    //   })
-    //   .then((res)=> (console.log(res))
-    //     .then((res)=>setarr(res))
-
-    //   .catch((err)=> console.log(err))
+    
   };
   return (
     <div className="maincontainer">
@@ -55,8 +44,8 @@ export const Checkout = () => {
                 <div className="text-success"></div>
               </li>
               <li className="list-group-item d-flex justify-content-between">
-                <span>Total (USD)</span>
-                <strong>${all}</strong>
+                <span>Total (INR)</span>
+                <strong>₹{all}</strong>
               </li>
             </ul>
           </div>
@@ -297,7 +286,7 @@ export const Checkout = () => {
                 <div className="col-md-3 mb-3">
                   <label>CVV</label>
                   <input
-                    type="text"
+                    type="password"
                     className="form-control"
                     id="cc-cvv"
                     placeholder=""

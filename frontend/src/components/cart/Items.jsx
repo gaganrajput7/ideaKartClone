@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
 import { CartContext } from "./Cart";
 
-const Items = ({ id, description, title, img, price, quantity }) => {
+const Items = ({ id, name, image, price, quantity }) => {
   const { removeItem, increment, decrement } = useContext(CartContext);
 
   return (
     <>
       <div className="items-info">
         <div className="product-img">
-          <img src={img} alt="iamge" />
+          <img src={image} alt="iamge" />
         </div>
 
         <div className="title">
-          <h2>{title}</h2>
-          <p>{description}</p>
+          <h3>{name}</h3>
         </div>
 
         <div className="add-minus-quantity">
@@ -23,7 +22,7 @@ const Items = ({ id, description, title, img, price, quantity }) => {
         </div>
 
         <div className="price">
-          <h3>{price}₹</h3>
+          <h3>₹{price}</h3>
         </div>
 
         <div className="remove-item">

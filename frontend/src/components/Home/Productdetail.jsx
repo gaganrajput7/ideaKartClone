@@ -14,10 +14,14 @@ const Productdetail = () => {
   console.log(data);
   // console.log(data.discription[0]);
 
+  const handleCart=()=>{
+    var cartData = JSON.parse(localStorage.getItem("product"))||[];
+    data.quantity=1;
+    cartData.push(data);
+    localStorage.setItem("product",JSON.stringify(cartData));
+    alert("Item added successfully!");
+  }
 
-const handleChange =()=>{
-navigate("/accountinfo")
-}
 
 
   return (
@@ -29,7 +33,7 @@ navigate("/accountinfo")
 
            {/* buy button here */}
            <span style={{fontSize: '22px'}}><b>Rs{data.price}</b></span>
-           <span style={{marginLeft:"25%"}}><button style={{border:"none",borderRadius:"5px",width:"auto", fontSize: '23px',padding: '10px 18px',backgroundColor:"orange",color:"white"}}>Buy Now</button></span>
+           <span style={{marginLeft:"25%"}}><button onClick={handleCart} style={{border:"none",borderRadius:"5px",width:"auto", fontSize: '23px',padding: '10px 18px',backgroundColor:"orange",color:"white"}}>Add To Cart</button></span>
 
             </div>
 

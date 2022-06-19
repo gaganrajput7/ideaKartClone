@@ -1,23 +1,31 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import "./cart.css";
-import { product } from "./product";
+// import { product } from "./product";
 import ContextCart from "./ContextCart";
 import { reducer } from "./reducer";
 
 export const CartContext = createContext();
 
-const initialState = {
-  item: product,
-  totalAmount: 0,
-  totalItem: 0,
-};
+
+
+
+
 
 const Cart = () => {
   // const [item, setItem] = useState(products);
+  const product=JSON.parse(localStorage.getItem("product"))||[];
+
+  const initialState = {
+    item: product,
+    totalAmount: 0,
+    totalItem: 0,
+  };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   // to delete the indv. elements from an Item Cart
   const removeItem = (id) => {
+    // product=product.splice(id,1);
+    // console.log(product);
     return dispatch({
       type: "REMOVE_ITEM",
       payload: id,
@@ -26,6 +34,7 @@ const Cart = () => {
 
   // clear the cart
   const clearCart = () => {
+    localStorage.removeItem("product");
     return dispatch({ type: "CLEAR_CART" });
   };
 

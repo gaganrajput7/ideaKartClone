@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./NavSTyles.css";
 // import { AiOutlineMenu } from "react-icons/ai";
@@ -8,6 +8,13 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [name, setName] = useState("");
+  const [cart, setCart]= useState("");
+
+  useEffect(() => {
+    setCart(JSON.parse(localStorage.getItem("product"))||[]);
+  },[cart])
+   
+  
   const handleChange = (e) => {
     setName(e.target.value);
   };
@@ -34,6 +41,7 @@ export default function NavBar() {
                 fontWeight: "lighter",
                 fontSize: "20px",
                 cursor: "pointer",
+                marginTop:"10px"
               }}
             >
               IDEAKART
@@ -42,10 +50,10 @@ export default function NavBar() {
 
           <div className="inputBtn">
             <input
+              className="searchInput"
               type="text"
               placeholder="Search"
               onChange={handleChange}
-              className="searchInput"
             />
             <button className="searchButton" onClick={handleClick}>
               Search
@@ -60,13 +68,14 @@ export default function NavBar() {
             Contact
           </Link>
           <Link to="/singin" className="linkStyle">
-            Sing In
+            Sign In
           </Link>
           <Link to="/singup" className="linkStyle">
-            Sing Up
+            Sign Up
           </Link>
+          <Link to="/cart">
           <div>
-            {/* <p
+            <p
               style={{
                 width: "20px",
                 height: "20px",
@@ -74,16 +83,17 @@ export default function NavBar() {
                 borderRadius: "50%",
                 position: "absolute",
                 right:"40px",
-                top:"-10px",
+                top:"0px",
                 color:"black",
                 display:"flex",
                 alignItems:"center",
                 justifyContent:"center"
                 
               }}
-            >0</p> */}
-            <AiOutlineShoppingCart style={{ fontSize: "30px" }} />
+            >{cart.length}</p>
+            <AiOutlineShoppingCart style={{ fontSize: "30px",color:"coral" }} />
           </div>
+          </Link>
         </div>
       </div>
     </>
