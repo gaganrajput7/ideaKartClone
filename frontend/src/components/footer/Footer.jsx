@@ -22,12 +22,12 @@ export default function Footer() {
       <div style={footerLi}>
 
      <Link to='/about' style={footerLinks}><li >About</li></Link>
-     <Link to='/about' style={footerLinks}><li>Contact</li></Link>
-     <Link to='/about' style={footerLinks}><li>Search</li></Link>
-     <Link to='/about' style={footerLinks}><li>Privacy Policy</li></Link>
-     <Link to='/about' style={footerLinks}><li>Refund Policy</li></Link>
-     <Link to='/about' style={footerLinks}><li>Earn Money Online</li></Link>
-     <Link to='/about' style={footerLinks}> <li>QuickBuyer</li></Link>
+     <Link to='/contact' style={footerLinks}><li>Contact</li></Link>
+     <Link to='/search' style={footerLinks}><li>Search</li></Link>
+     <Link to='/privacy' style={footerLinks}><li>Privacy Policy</li></Link>
+     <Link to='/refund' style={footerLinks}><li>Refund Policy</li></Link>
+     <Link to='/earn' style={footerLinks}><li>Earn Money Online</li></Link>
+     <Link to='/quick' style={footerLinks}> <li>QuickBuyer</li></Link>
 
     </div>
     </>
