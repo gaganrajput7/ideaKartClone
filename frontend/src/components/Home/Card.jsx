@@ -7,7 +7,7 @@ import Productdetail from "./Productdetail";
 function Card(props) {
  const navigate=useNavigate();
   const row = props.row;
-
+ 
   
   const handleData=()=>{
 
