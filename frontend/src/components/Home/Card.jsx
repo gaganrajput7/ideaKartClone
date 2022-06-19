@@ -7,13 +7,19 @@ import Productdetail from "./Productdetail";
 function Card(props) {
  const navigate=useNavigate();
   const row = props.row;
-  // console.log(row);
 
   
   const handleData=()=>{
 
     localStorage.setItem("productData",JSON.stringify(row));
     navigate("/productdetail")
+  }
+  const handleCart=()=>{
+    var cartData = JSON.parse(localStorage.getItem("product"))||[];
+    row.quantity=1;
+    cartData.push(row);
+    localStorage.setItem("product",JSON.stringify(cartData));
+    alert("Item added successfully!");
   }
 
 
@@ -32,12 +38,12 @@ function Card(props) {
         <div className={styles.cardIcons}>
           <div className={styles.cardCartIcon}>
             <img src="/shopping-cart.png" alt="cartIcon" />
-            <a onClick={handleData}>View Now</a>
+            <a onClick={handleCart}>Add To Cart</a>
           </div>
           <div className={styles.cardVerticalLine}></div>
           <div className={styles.cardBulletIcon}>
             <img src="/bullet-list.png" alt="bulletIcon" />
-            <a a href="#">
+            <a  onClick={handleData}>
               
               More Details
             </a>
